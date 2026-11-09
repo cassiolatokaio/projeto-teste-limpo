@@ -1,0 +1,10 @@
+name: "Segurança Contínua"
+on: 
+  push:
+    branches: [ main, master ]
+
+jobs:
+  chamar-protecao:
+    uses: cassiolatokaio/security-baseline/.github/workflows/security-scan.yml@main
+    with:
+      profile: 'L2' 
